@@ -21,11 +21,10 @@ def fetch_data_from_database():
 
         cursor = connection.cursor()
 
-        query = "SELECT * FROM weather_statistics;"  # Zapytanie SQL do pobrania wszystkich danych
+        query = "SELECT * FROM weather_statistics;"
         cursor.execute(query)
         data = cursor.fetchall()
 
-        # Przekształć wyniki zapytania do DataFrame
         columns = [desc[0] for desc in cursor.description]
         df = pd.DataFrame(data, columns=columns)
 

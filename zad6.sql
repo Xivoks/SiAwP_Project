@@ -90,7 +90,7 @@ END;
 
 SELECT KonwertujNaFahrenheita(25.5) AS TempFahrenheit;
 
--- Trigger zmieniający kierunek wiatru na "ZIMNO" dla temperatury poniżej 10 stopni
+-- Trigger zmieniający kierunek wiatru dla temperatury poniżej 10 stopni
 DELIMITER //
 CREATE TRIGGER ZimnyMiesiacTrigger
 BEFORE INSERT ON historical_weather
